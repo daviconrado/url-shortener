@@ -1,0 +1,29 @@
+{
+  "name": "urlshortener",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev:server": "tsx watch --env-file .env src/server.ts",
+    "dev:client": "cd client && npm run dev",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\""
+  },
+  "author": "Davi Conrado",
+  "license": "ISC",
+  "description": "An URL shortener app",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "concurrently": "^9.1.2",
+    "express": "^4.21.2",
+    "prisma": "^6.5.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.5.0",
+    "cors": "^2.8.5",
+    "lucide-react": "^0.483.0",
+    "nanoid": "^5.1.5",
+    "zod": "^3.24.2"
+  }
+}

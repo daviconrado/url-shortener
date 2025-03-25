@@ -1,0 +1,8 @@
+node_modules
+# Keep environment variables out of version control
+.env
+build
+##Front-end
+client/node_modules
+client/dist
+client/.env

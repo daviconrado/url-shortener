@@ -8,6 +8,8 @@ const PORT = 3333;
 
 const app = express();
 
+app.use(cors());
+
 if (process.env.NODE_ENV === "development") {
   app.use(cors({ origin: "http://localhost:5000" })); // Porta do React
 }

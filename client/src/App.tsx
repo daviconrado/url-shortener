@@ -8,7 +8,7 @@ function App() {
         <div>
           <div className="container d-flex w-100 justify-content-center align-items-center gap-5 text-center">
             <TrendingDown />
-            <h1 className="text-center fw-bold">URL Shortner</h1>
+            <h1 className="text-center fw-bold">URL Shortener</h1>
             <TrendingDown />
           </div>
 

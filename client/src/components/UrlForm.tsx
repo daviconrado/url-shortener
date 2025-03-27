@@ -4,7 +4,10 @@ import { useState } from "react";
 function UrlForm() {
   const [url, setUrl] = useState("");
   const [shortUrl, setShortUrl] = useState(null);
-  const [error, setError] = useState(""); // Adicione estado para erros
+  const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const originalUrl = import.meta.env.VITE_REACT_APP_API_URL;
 
   const handleShortenUrl = async (e: any) => {
     e?.preventDefault();
@@ -15,9 +18,10 @@ function UrlForm() {
 
     setError("");
     setShortUrl(null);
+    setIsLoading(true);
 
     try {
-      const response = await fetch("http://localhost:3333/api", {
+      const response = await fetch(originalUrl + "/api/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ originalUrl: url }),
@@ -29,6 +33,8 @@ function UrlForm() {
       setShortUrl(data.shortUrl);
     } catch (error: any) {
       setError(error.message);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -46,9 +52,23 @@ function UrlForm() {
           <button
             className="btn btn-primary d-flex gap-2 align-items-center"
             type="submit"
+            disabled={isLoading}
           >
-            Shorten URL
-            <ArrowRight />
+            {isLoading ? (
+              <>
+                <span
+                  className="spinner-border spinner-border-sm"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+                Loading...
+              </>
+            ) : (
+              <>
+                Shorten URL
+                <ArrowRight />
+              </>
+            )}
           </button>
         </form>
       </div>
@@ -60,11 +80,11 @@ function UrlForm() {
           <div className="d-flex flex-column bg-black bg-opacity-50 rounded-3 p-3 px-lg-5">
             <p>URL shortened:</p>
             <a
-              href={"http://localhost:3333/api/" + shortUrl}
+              href={originalUrl + "/api/" + shortUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {"http://localhost:3333/api/" + shortUrl}
+              {originalUrl + "/api/" + shortUrl}
             </a>
           </div>
         </div>

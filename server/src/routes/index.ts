@@ -3,6 +3,6 @@ import urlRoutes from "./url-routes";
 
 const routes = Router();
 
-routes.use("/api", urlRoutes);
+routes.use("", urlRoutes);
 
 export { routes };

@@ -21,7 +21,7 @@ function UrlForm() {
     setIsLoading(true);
 
     try {
-      const response = await fetch(originalUrl + "/api/", {
+      const response = await fetch(originalUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ originalUrl: url }),
@@ -89,11 +89,11 @@ function UrlForm() {
             <span>
               URL shortened:
               <a
-                href={originalUrl + "/api/" + shortUrl}
+                href={originalUrl + "/" + shortUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {originalUrl + "/api/" + shortUrl}
+                {originalUrl + "/" + shortUrl}
               </a>
             </span>
           </div>

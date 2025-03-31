@@ -41,6 +41,6 @@ Este projeto é um **Encurtador de Links** que permite transformar URLs extensas
 
 ## 🎨 Layout
 
-<img src="https://i.ibb.co/0RYRNcNN/imagem-2025-03-25-132705744.png" alt="imagem-2025-03-25-132705744" border="0">
+<img src="https://i.ibb.co/nqT1tR7v/Captura-de-tela-2025-03-29-020156.png" border="0">
 
 Feito com ❤️ por Davi Conrado 👋🏽 [Entre em contato!](https://www.linkedin.com/in/daviconrado/)

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Define a versão do ECMAScript alvo
+    "module": "CommonJS", // Gera código em formato ES Modules
+    "moduleResolution": "node", // Estratégia de resolução de módulos
+    "outDir": "./dist", // Pasta de saída dos arquivos compilados
+    "rootDir": "./src", // Pasta de origem dos arquivos
+    "strict": true, // Habilita verificações rigorosas
+    "esModuleInterop": true, // Permite interoperabilidade com CommonJS
+    "skipLibCheck": true // Opcional: ignora verificação de tipos de libs externas
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

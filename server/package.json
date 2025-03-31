@@ -2,10 +2,13 @@
   "name": "urlshortener",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "dev:server": "tsx watch --env-file .env src/server.ts",
-    "dev:client": "cd .. && cd client && npm run dev",
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\""
+    "dev:client": "cd ../client && npm run dev",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "tsup src",
+    "start": "node dist/server.js"
   },
   "author": "Davi Conrado",
   "license": "ISC",
@@ -22,11 +25,13 @@
     "typescript": "^5.8.2"
   },
   "dependencies": {
+    "@esbuild-kit/cjs-loader": "^2.4.4",
     "@prisma/client": "^6.5.0",
     "axios": "^1.8.4",
     "cors": "^2.8.5",
     "lucide-react": "^0.483.0",
-    "nanoid": "^5.1.5",
+    "nanoid": "^3.3.7",
+    "tsup": "^8.4.0",
     "zod": "^3.24.2"
   },
   "keywords": []

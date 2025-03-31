@@ -1,4 +1,4 @@
-const axios = require("axios");
+import axios from "axios";
 import { Request, Response, NextFunction, ErrorRequestHandler } from "express";
 import { AppError } from "../utils/AppError";
 

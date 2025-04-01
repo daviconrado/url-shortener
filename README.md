@@ -18,6 +18,8 @@
 
 Este projeto é um **Encurtador de Links** que permite transformar URLs extensas em links curtos e de fácil compartilhamento. Desenvolvido para estudos, a aplicação teve como objetivo explorar na prática conceitos de desenvolvimento full-stack, integração entre frontend e backend, e o uso de ferramentas modernas.
 
+https://url-shortener-client-zf4h.onrender.com
+
 ## ⚙️ Funcionalidades
 
 - **Encurtamento de URLs:** Transforme links longos em URLs curtas e personalizadas.

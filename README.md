@@ -43,6 +43,6 @@ https://url-shortener-client-zf4h.onrender.com
 
 ## 🎨 Layout
 
-<img src="https://i.ibb.co/nqT1tR7v/Captura-de-tela-2025-03-29-020156.png" border="0">
+<a href="https://ibb.co/LDMgHvxW"><img src="https://i.ibb.co/fVbNLQk5/Captura-de-tela-2025-03-29-020156.png" alt="Captura-de-tela-2025-03-29-020156" border="0" /></a>
 
 Feito com ❤️ por Davi Conrado 👋🏽 [Entre em contato!](https://www.linkedin.com/in/daviconrado/)
